@@ -93,6 +93,38 @@ typedef AlarmBaseType* AlarmBaseRefType;
 typedef u_int8 AlarmType;
 
 
+/*
+================================Declarations of system services===================================
+*/
+
+extern void DeclareTask ( u_int8 TaskID );
+
+extern StatusType ActivateTask( TaskType TaskID );
+ 
+extern StatusType TerminateTask( void );
+
+extern StatusType ChainTask ( TaskType TaskID );
+
+extern StatusType Schedule ( void );
+
+extern StatusType GetTaskID ( TaskRefType TaskID);
+
+extern StatusType GetTaskState ( TaskRefType TaskID, TaskStateRefType State );
+
+extern void EnableAllInterrupts ( void );
+
+extern void DisableAllInterrupts ( void );
+
+extern void ResumeAllInterrupts ( void );
+
+extern void SuspendAllInterrupts ( void );
+
+extern void ResumeOSInterrupts ( void );
+
+extern void SuspendOSInterrupts ( void );
+
+extern StatusType GetResource ( ResourceType ResID );
+
 
   
 
